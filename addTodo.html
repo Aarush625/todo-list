@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addTodo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body id="body" onload="loaderFunction()">
+    <div class="loader">
+        <div class="box box-1">
+            <div class="side-left"></div>
+            <div class="side-right"></div>
+            <div class="side-top"></div>
+        </div>
+        <div class="box box-2">
+            <div class="side-left"></div>
+            <div class="side-right"></div>
+            <div class="side-top"></div>
+        </div>
+        <div class="box box-3">
+            <div class="side-left"></div>
+            <div class="side-right"></div>
+            <div class="side-top"></div>
+        </div>
+        <div class="box box-4">
+            <div class="side-left"></div>
+            <div class="side-right"></div>
+            <div class="side-top"></div>
+        </div>
+    </div>
+    <div class="modal">
+        <h1>Set Your Priorty</h1>
+        <div class="options">
+            <button id="btn1">
+                <div>
+                    <span>
+                        <p>High</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <p>High</p>
+                    </span>
+                </div>
+            </button>
+            <button id="btn2">
+                <div>
+                    <span>
+                        <p>Medium</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <p>Medium</p>
+                    </span>
+                </div>
+            </button>
+            <button id="btn3">
+                <div>
+                    <span>
+                        <p>Low</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <p>Low</p>
+                    </span>
+                </div>
+            </button>
+
+        </div>
+    </div>
+
+    <div class="info" id="info">
+        <div class="info__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none">
+                <path fill="#393a37"
+                    d="m12 1.5c-5.79844 0-10.5 4.70156-10.5 10.5 0 5.7984 4.70156 10.5 10.5 10.5 5.7984 0 10.5-4.7016 10.5-10.5 0-5.79844-4.7016-10.5-10.5-10.5zm.75 15.5625c0 .1031-.0844.1875-.1875.1875h-1.125c-.1031 0-.1875-.0844-.1875-.1875v-6.375c0-.1031.0844-.1875.1875-.1875h1.125c.1031 0 .1875.0844.1875.1875zm-.75-8.0625c-.2944-.00601-.5747-.12718-.7808-.3375-.206-.21032-.3215-.49305-.3215-.7875s.1155-.57718.3215-.7875c.2061-.21032.4864-.33149.7808-.3375.2944.00601.5747.12718.7808.3375.206.21032.3215.49305.3215.7875s-.1155.57718-.3215.7875c-.2061.21032-.4864.33149-.7808.3375z">
+                </path>
+            </svg>
+        </div>
+        <div class="info__title">Todo Was Saved</div>
+        <div class="info__close"><svg height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
+                    fill="#393a37"></path>
+            </svg></div>
+    </div>
+    <nav class="sidebar close bodys">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <i class='bx bx-clipboard' id="logo-image"></i>
+                </span>
+                <div class="text header-text">
+                    <span class="name">TodoList</span>
+                    <span class="profession">Manage Everything</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="left">
+
+        </div>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="search" placeholder="Search">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link" onclick="redirectToHome()">
+                        <a href="#">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link" onclick="redirectToTodo()">
+                        <a href="#">
+                            <i class='bx bx-clipboard icon'></i>
+                            <span class="text nav-text">Todo</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-book-bookmark icon'></i>
+                            <span class="text nav-text">Books</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-plus icon'></i>
+                            <span class="text nav-text">Add Todo</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-user icon'></i>
+                            <span class="text nav-text" id="user-field"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="" onclick={Logout()}>
+                    <a href="#">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class="bx bx-moon icon moon"></i>
+                        <i class="bx bx-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+
+    </nav>
+    <div class="body bodys">
+        <div class="form">
+
+            <p class="title">Add A Todo! </p>
+            <p class="message">Signup now and get full access to our app. </p>
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input" id="title">
+                    <span>Title</span>
+                    <small class="sm" id="userTitleError">Field Required</small>
+                </label>
+
+                <label>
+                    <button class="button">
+                        <span class="button-content" id="button">Priorty</span>
+                    </button>
+                </label>
+            </div>
+
+            <label>
+                <input required="" placeholder="" type="text" class="input" id="description">
+                <span>Description</span>
+                <small class="sm">Field Required</small>
+            </label>
+
+            <label>
+                <input required="" placeholder="" type="text" class="input" id="author">
+                <span>Author</span>
+                <small class="sm">Field Required</small>
+            </label>
+            <button class="btn" id="buttonSubmit">
+                <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1"
+                    class="sparkle">
+                    <path
+                        d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                    </path>
+                </svg>
+
+                <span class="text">Add Todo</span>
+            </button>
+        </div>
+    </div>
+    <img src="./thinking.svg" alt="" id="thinkingImage">
+</body>
+<script>
+    let preloader = document.querySelector('.loader');
+    function loaderFunction() {
+        preloader.style.display = 'none';
+    }
+    function redirectToHome() {
+        window.location = '/get-started'
+    }
+    function redirectToTodo() {
+        window.location = '/Todo'
+    }
+    function Logout(){
+        window.location = '/login'
+    }
+</script>
+<script src="addTodo.js" defer></script>
+
+</html>

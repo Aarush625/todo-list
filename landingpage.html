@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO MANAGER - Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="landingpage.css">
+</head>
+<body onload="loaderFunction()">
+    <div class="loader" id="loader">
+        <div class="box box-1">
+          <div class="side-left"></div>
+          <div class="side-right"></div>
+          <div class="side-top"></div>
+        </div>
+        <div class="box box-2">
+          <div class="side-left"></div>
+          <div class="side-right"></div>
+          <div class="side-top"></div>
+        </div>
+        <div class="box box-3">
+          <div class="side-left"></div>
+          <div class="side-right"></div>
+          <div class="side-top"></div>
+        </div>
+        <div class="box box-4">
+          <div class="side-left"></div>
+          <div class="side-right"></div>
+          <div class="side-top"></div>
+        </div>
+    </div>
+    <div class="container-1">
+        <div class="lefty">
+            <div class="text-main">
+                <h1>Ultimate <br> Todo List</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque quidem saepe, atque unde maxime alias doloribus l</p>
+                <button class="cssbuttons-io-button btn" onclick="redirectToRegister()"> Get started
+                    <div class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="right">
+            <img src="todo.svg" alt="todo.svg">
+        </div>
+    </div>
+</body>
+<script>
+    function redirectToAddTodo(){
+        window.location = '/addTodo'
+    }
+    let preloader = document.getElementById('loader');
+    function loaderFunction(){
+        preloader.style.display = 'none';
+    }
+    function redirectToTodo(){
+        window.location = '/Todo'
+    }
+    function redirectToRegister(){
+        window.location = '/register'
+    }
+</script>
+<script src="./landingpage.js" defer></script>
+</html>

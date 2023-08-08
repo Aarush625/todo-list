@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyManager - Manage Your Studies</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a132e9c492.js" crossorigin="anonymous"></script>
+</head>
+<body onload="loaderFunction()" id="body">
+    <div class="wrapper" id="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+    </div>
+    <div class="container">
+        <div class="ball" id="ball">
+        </div>
+        <img id="img" src="undraw_features_overview_re_2w78.svg" alt="beach_day">
+        <!-- <img id="img1" src="undraw_air_support_re_nybl.svg" alt="beach_day"> -->
+        <div class="text" id="text">
+            <h1>Old here?</h1>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odio iusto, labore</h3>
+            <button><a href="/login">SIGN IN</a></button>
+        </div>
+    </div>
+    <div class="container-right">
+        <div class="form">
+            <h1 id="logo">Todo List</h1>
+            <h1>Sign Up</h1> 
+            <form action="">
+                <div class="input">
+                    <div class="user-input">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username" id="username" required>
+                    </div>
+                    <span id="username_error" class="errors">x</span>
+                </div>
+                <div class="input">
+                    <div class="user-input">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" id="email" required>
+                    </div>
+                    <span id="email_error" class="errors">x</span>
+                </div>
+                <div class="input">
+                    <div class="user-input">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password" required>
+                        <i class="fa-solid fa-eye-slash eyes" id="eye-slash"></i>
+                        <i class="fa-solid fa-eye eyes" id="eye"></i>
+                    </div>
+                    <span id="password_error" class="errors">x</span>
+                </div>
+                <div class="input">
+                    <div class="user-input">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password" id="cfm-password" required>
+                        <i class="fa-solid fa-eye-slash eyes" id="eye-slash1"></i>
+                        <i class="fa-solid fa-eye eyes" id="eye1"></i>
+                    </div>
+                    <span id="cfm-password_error" class="errors">x</span>
+                </div>
+            </form>
+            <button id="btn">SIGN UP</button>
+        </div>
+    </div>
+</body>
+<script>
+    let preloader = document.getElementById('wrapper');
+    function loaderFunction(){
+        preloader.style.display = 'none';
+    }
+</script>
+<script src="script2.js" defer></script>
+</html>

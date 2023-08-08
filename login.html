@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyManager - Manage Your Studies</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/a132e9c492.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball" id="ball">
+        </div>
+        <img id="img" src="undraw_features_overview_re_2w78.svg" alt="beach_day">
+        <!-- <img id="img1" src="undraw_air_support_re_nybl.svg" alt="beach_day"> -->
+        <div class="text" id="text">
+            <h1>New here?</h1>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odio iusto, labore</h3>
+            <button><a href="/register">SIGN UP</a></button>
+        </div>
+    </div>
+    <div class="container-right">
+        <div class="form">
+            <h1 id="logo">Todo List</h1>
+            <h1>Sign In</h1>
+            <form action="">
+                <div class="input">
+                    <div class="user-input">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username" id="username">
+                    </div>
+                    <span id="username_error" class="error">x</span>
+                </div>
+                <div class="input">
+                    <div class="user-input">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password">
+                        <i class="fa-solid fa-eye-slash" id="eye-slash"></i>
+                        <i class="fa-solid fa-eye" id="eye"></i>
+                    </div>
+                    <span id="password_error" class="error">x</span>
+                </div>
+            </form>
+            <button id="btn">SIGN IN</button>
+        </div>
+    </div>
+</body>
+<script src="script.js" defer></script>
+</html>
